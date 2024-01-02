@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {},
             child: Text(
               "buralarda yar seven mutlaka verem olur",
-              style: TextStyle(fontSize: 15),
+              style: TextStyle(fontSize: 15, color: Colors.black),
             )),
       ),
     );
