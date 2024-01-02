@@ -15,7 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Colors.black,
         child: ElevatedButton(
             onPressed: () {},
-            child: Text("buralarda yar seven mutlaka verem olur")),
+            child: Text(
+              "buralarda yar seven mutlaka verem olur",
+              style: TextStyle(fontSize: 15),
+            )),
       ),
     );
   }
