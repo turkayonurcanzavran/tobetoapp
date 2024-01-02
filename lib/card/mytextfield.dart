@@ -28,7 +28,7 @@ class Mytextfield extends StatelessWidget {
           fillColor: Colors.teal,
           filled: true,
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.amber),
+          hintStyle: TextStyle(color: Color.fromARGB(255, 26, 19, 0)),
         ),
       ),
     );
