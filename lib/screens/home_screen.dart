@@ -13,7 +13,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Container(
         color: Colors.black,
-        child: ElevatedButton(onPressed: () {}, child: Text("vcahjd")),
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Text("buralarda yar seven mutlaka verem olur")),
       ),
     );
   }
