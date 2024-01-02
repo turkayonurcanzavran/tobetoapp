@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto_app/card/logincard.dart';
+import 'package:tobeto_app/card/my_button.dart';
 import 'package:tobeto_app/card/mytextfield.dart';
+import 'package:tobeto_app/card/square_tile.dart';
+import 'package:tobeto_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({
@@ -15,8 +18,16 @@ class _LoginScreenState extends State<LoginScreen> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+  void googleLogin() {}
+  void appleLogin() {}
+
   @override
   Widget build(BuildContext context) {
+    void singUserIn() {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => HomeScreen()));
+    }
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -26,28 +37,134 @@ class _LoginScreenState extends State<LoginScreen> {
         )),
         alignment: Alignment.center,
         child: Logincard(
-          theHeight: MediaQuery.of(context).size.width * 1,
-          theWidth: MediaQuery.of(context).size.height * 0.5,
+          theHeight: MediaQuery.of(context).size.width * 1.4,
+          theWidth: MediaQuery.of(context).size.height * 0.4,
           theChild: Container(
             child: Column(
               children: [
                 Transform.scale(
                   scale: 0.7,
-                  child: Image.asset("assets/image/tobeto-white-logo.png"),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: Image.asset("assets/image/tobeto-white-logo.png"),
+                  ),
                 ),
+
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+
+                //Mytextfield.dart sayfasında oluşturdugun constructor'ı çağırıyorum. böylece iki sayfa arasındaki veri aktarımı sağlanıyor
+
                 Mytextfield(
                   controller: usernameController,
-                  hintText: "tuurkoı",
+                  hintText: "Kullanıcı Adı",
                   obscureText: true,
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                ),
+                    height: MediaQuery.of(context).size.height *
+                        0.02 // mediaquery farklı cihazların çeşitli ekran boyutlarına sahip olması durumunda bile uygulamanın boyutlarını ayarlamak içindirç.iki kutucuk arasındaki yüksekliği düzenledim.
+                    ),
                 Mytextfield(
                   controller: passwordController,
-                  hintText: "turko",
+                  hintText: "Parola",
                   obscureText: false,
                 ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                //Text widget'ını yazdıktan sonra kutunun soluna hizalamak istedim, ama 'align' özelliğini kullanamadım. Çünkü çalışmanın başından beri 'center' kullanıyorum. Bu yüzden, 'Text' widget'ını yatayda 'Row' ile sardım ve 'mainAxisAlignment' özelliğini 'end' olarak ayarlayarak 'Card' ile mesafe oluşturmak için 'padding' kullandım
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 33.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        "Şifremi Unuttum",
+                        style: Theme.of(context)
+                            .textTheme
+                            .displaySmall
+                            ?.copyWith(color: Colors.white, fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                MyButton(
+                    onTap:
+                        singUserIn), // şimdilik bu sayfayı oluşturmadım bu uzden sadece kullanıcı girişi yap diyeceğim. bunun için boş bir fonksiyon oluşturuğ tanımlıyorum.
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                //divider  çizgiyle ayrılmış "Hesap Oluştur"  bir metnin düzenlenmesini sağladı. Bu düzen, metni iki çizgiye ihtiyacım olduğu için driver kullandım row ile sarmallayarak ve genel bir ayrım sağlandı.
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 31.0),
+                  child: Row(
+                    children: [
+                      const Expanded(
+                        child: Divider(
+                          thickness: 1,
+                          color: Color.fromARGB(127, 220, 219, 219),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          "Hesap Oluştur",
+                          style: Theme.of(context)
+                              .textTheme
+                              .displaySmall
+                              ?.copyWith(
+                                  color: Color.fromARGB(255, 243, 242, 242),
+                                  fontSize: 16),
+                        ),
+                      ),
+                      const Expanded(
+                        child: Divider(
+                          thickness: 1,
+                          color: Color.fromARGB(127, 220, 219, 219),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //google + apple button
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SquareTile(
+                      imagePath: "assets/image/google_logo.png",
+                      onTap: googleLogin,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    SquareTile(
+                        imagePath: "assets/image/apple_logo.png",
+                        onTap: appleLogin),
+                  ],
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "üye Değilsen,",
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          color: Theme.of(context).colorScheme.background),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      "Şimdi Kayıt Ol ",
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                          color: Theme.of(context).colorScheme.background),
+                    )
+                  ],
+                )
               ],
             ),
           ),
