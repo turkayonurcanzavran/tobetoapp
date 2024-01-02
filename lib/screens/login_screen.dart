@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Mytextfield(
                   controller: usernameController,
-                  hintText: "dhfd",
+                  hintText: "tuurkoı",
                   obscureText: true,
                 ),
                 SizedBox(
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Mytextfield(
                   controller: passwordController,
-                  hintText: "eslemm özlük",
+                  hintText: "turko",
                   obscureText: false,
                 ),
               ],
