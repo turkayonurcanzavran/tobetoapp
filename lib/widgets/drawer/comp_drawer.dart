@@ -117,7 +117,7 @@ class CompDrawer extends StatelessWidget {
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) =>
-                                const CalendarScreen())); // tobeto ekranı import edilecek
+                                const TobetoScreen())); // tobeto ekranı import edilecek
                       },
                     ),
                   ),

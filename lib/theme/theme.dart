@@ -6,7 +6,8 @@ ThemeData lightMode = ThemeData(
   colorScheme: const ColorScheme.light(
       background: Color.fromARGB(255, 255, 255, 255),
       primary: Color(0xFF9C34FC),
-      secondary: Color(0xFFCC6CF4)),
+      secondary: Color(0xFFCC6CF4),
+      onPrimary: Color.fromARGB(255, 160, 160, 160)),
   textTheme: const TextTheme(
     displaySmall: TextStyle(
       fontFamily: 'Tinos',
@@ -33,9 +34,10 @@ ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   useMaterial3: true,
   colorScheme: const ColorScheme.dark(
-      background: Color.fromARGB(255, 132, 47, 205),
+      background: Color.fromARGB(255, 235, 215, 253),
       primary: Color.fromARGB(255, 56, 19, 91),
-      secondary: Color.fromARGB(255, 107, 1, 152)),
+      secondary: Color.fromARGB(255, 107, 1, 152),
+      onPrimary: Color.fromARGB(255, 103, 100, 100)),
   textTheme: const TextTheme(
     displaySmall: TextStyle(
       fontFamily: 'Tinos',
