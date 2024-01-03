@@ -38,7 +38,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
       endDrawer: const CompDrawer(),
       floatingActionButton: buildSpeedDial(context),
       body: Container(
-        child: Text("takvim"),
+        child: Text(
+          "takvim",
+          style: TextStyle(color: Colors.black),
+        ),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
     );
