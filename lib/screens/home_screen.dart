@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/main.dart';
-import 'login_screen.dart';
+
+import 'package:tobeto_app/homescreen/text_styles.dart';
+
 import 'package:tobeto_app/drawer/comp_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,27 +15,40 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: Padding(
-            padding: const EdgeInsets.only(
-              left: 10,
-              top: 10,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Image.asset(
-                  "assets/image/tobeto-logo.png",
-                  width: 200,
-                  height: 200,
-                ),
-              ],
-            ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Padding(
+          padding: const EdgeInsets.only(
+            left: 10,
+            top: 10,
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          centerTitle: true,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                "assets/image/tobeto-white-logo.png",
+                width: 200,
+                height: 200,
+              ),
+            ],
+          ),
         ),
-        endDrawer: const CompDrawer());
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        centerTitle: true,
+      ),
+      endDrawer: const CompDrawer(),
+      body: ListView(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          const TextStyles(
+            textSyle1: "TOBETO",
+            textStyle2: "'ya hoş geldin",
+            textsSyle3: "Eslem Özlük",
+            textsSyle4:
+                "Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!",
+          ),
+        ],
+      ),
+    );
   }
 }
