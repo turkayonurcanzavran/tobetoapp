@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Transform.scale(
                   scale: 0.7,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 30),
+                    padding: const EdgeInsets.only(top: 26),
                     child: Image.asset("assets/image/tobeto-white-logo.png"),
                   ),
                 ),
