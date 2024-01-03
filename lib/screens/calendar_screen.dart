@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/drawer/comp_drawer.dart';
+import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({Key? key}) : super(key: key);

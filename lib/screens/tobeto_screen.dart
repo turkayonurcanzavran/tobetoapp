@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tobeto_app/main.dart';
-import 'package:tobeto_app/drawer/comp_drawer.dart';
+import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 
 class TobetoScreen extends StatefulWidget {
   const TobetoScreen({ Key? key }) : super(key: key);
