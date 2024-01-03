@@ -37,7 +37,6 @@ class TextStyles extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       fontSize: 34,
                       fontWeight: FontWeight.normal,
-                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
               ),
             ],
@@ -47,7 +46,6 @@ class TextStyles extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   fontSize: 34,
                   fontWeight: FontWeight.normal,
-                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.04),
@@ -57,10 +55,10 @@ class TextStyles extends StatelessWidget {
               textsSyle4,
               textAlign: TextAlign.center,
               softWrap: true,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodySmall
+                  ?.copyWith(fontWeight: FontWeight.w400, fontSize: 16),
             ),
           )
         ],

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/card/logincard.dart';
+
 import 'package:tobeto_app/homescreen/box_decorations.dart';
 
 import 'package:tobeto_app/homescreen/text_styles.dart';
 
-import 'package:tobeto_app/drawer/comp_drawer.dart';
+import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
+
+import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -39,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       endDrawer: const CompDrawer(),
+      floatingActionButton: buildSpeedDial(context),
       body: ListView(
         children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),

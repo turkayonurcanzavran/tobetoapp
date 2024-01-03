@@ -23,21 +23,19 @@ class Mytextfield extends StatelessWidget {
               borderSide: BorderSide(color: Color.fromARGB(89, 154, 153, 153)),
               borderRadius: BorderRadius.all(Radius.circular(
                   10))), //köşelere ovallik vermek için kullandım.
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             //focusedborder kullanıcı deger girdiğini anlaması için
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.background),
-            borderRadius: const BorderRadius.all(
+            borderSide: BorderSide(color: Color.fromARGB(209, 131, 131, 131)),
+            borderRadius: BorderRadius.all(
                 Radius.circular(10)), //kutuya ovallik eklemek için
           ),
-          fillColor:
-              Theme.of(context).colorScheme.background, //kutunun iç rengi
+          fillColor: Theme.of(context).colorScheme.onPrimary, //kutunun iç rengi
           filled: true,
           hintText: hintText, //2
           hintStyle: Theme.of(context)
               .textTheme
               .displaySmall
-              ?.copyWith(color: Colors.grey[500]),
+              ?.copyWith(color: Color.fromARGB(209, 122, 122, 122)),
           //??? işaretini displaySmall değerinin null olup olmadığını kontrol eder.
           //Eğer displaySmall null ise, copyWith işlemi gerçekleştirilmez ve null döner. nullable kontrolu için ekledim.
 
