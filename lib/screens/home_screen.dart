@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto_app/card/logincard.dart';
+import 'package:tobeto_app/homescreen/box_decorations.dart';
 
 import 'package:tobeto_app/homescreen/text_styles.dart';
 
@@ -47,6 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
             textsSyle4:
                 "Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!",
           ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          BoxDecorations(width: 100, height: 200, text: "eslem"),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
         ],
       ),
     );

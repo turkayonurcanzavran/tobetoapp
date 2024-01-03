@@ -6,7 +6,7 @@ import 'package:tobeto_app/card/square_tile.dart';
 import 'package:tobeto_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({
+  const LoginScreen({
     Key? key,
   }) : super(key: key);
 
