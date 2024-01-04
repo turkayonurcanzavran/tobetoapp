@@ -49,27 +49,6 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
           'Sayfa içeriği',
           style: TextStyle(fontSize: 18),
         ),
-      ), floatingActionButton: SpeedDial(
-        icon: Icons.message,
-        activeIcon: Icons.message_outlined,
-        elevation: 3.0,
-        backgroundColor: Color.fromRGBO(153, 51, 255, 1),
-        overlayColor: Colors.black,
-        overlayOpacity: 0.5,
-        spacing: 10.0,
-        curve: Curves.easeInOutCubic,
-        children: [
-          SpeedDialChild(
-            child: Icon(Icons.mail),
-            backgroundColor: const Color.fromRGBO(153, 51, 255, 1),
-            onTap: () => print('Mail tıklandı'),
-          ),
-          SpeedDialChild(
-            child: Icon(Icons.phone),
-            backgroundColor: Colors.green,
-            onTap: () => print('whatsapp tıklandı'), //
-          ),
-        ],
       ),
     );
   }
