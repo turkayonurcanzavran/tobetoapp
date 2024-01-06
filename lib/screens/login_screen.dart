@@ -6,7 +6,7 @@ import 'package:tobeto_app/card/square_tile.dart';
 import 'package:tobeto_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({
+  const LoginScreen({
     Key? key,
   }) : super(key: key);
 
@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Mytextfield(
                   controller: usernameController,
                   hintText: "Kullanıcı Adı",
-                  obscureText: true,
+                  obscureText: false,
                 ),
                 SizedBox(
                     height: MediaQuery.of(context).size.height *
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Mytextfield(
                   controller: passwordController,
                   hintText: "Parola",
-                  obscureText: false,
+                  obscureText: true,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 //Text widget'ını yazdıktan sonra kutunun soluna hizalamak istedim, ama 'align' özelliğini kullanamadım. Çünkü çalışmanın başından beri 'center' kullanıyorum. Bu yüzden, 'Text' widget'ını yatayda 'Row' ile sardım ve 'mainAxisAlignment' özelliğini 'end' olarak ayarlayarak 'Card' ile mesafe oluşturmak için 'padding' kullandım
@@ -82,7 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: Theme.of(context)
                             .textTheme
                             .displaySmall
-                            ?.copyWith(color: Colors.white, fontSize: 15),
+                            ?.copyWith(
+                                color: Color.fromARGB(209, 255, 255, 255),
+                                fontSize: 15),
                       ),
                     ],
                   ),
@@ -100,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Expanded(
                         child: Divider(
                           thickness: 1,
-                          color: Color.fromARGB(127, 220, 219, 219),
+                          color: Color.fromARGB(209, 255, 255, 255),
                         ),
                       ),
                       Padding(
@@ -111,14 +113,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               .textTheme
                               .displaySmall
                               ?.copyWith(
-                                  color: Color.fromARGB(255, 243, 242, 242),
+                                  color: Color.fromARGB(209, 255, 255, 255),
                                   fontSize: 16),
                         ),
                       ),
                       const Expanded(
                         child: Divider(
                           thickness: 1,
-                          color: Color.fromARGB(127, 220, 219, 219),
+                          color: Color.fromARGB(209, 255, 255, 255),
                         ),
                       ),
                     ],
@@ -151,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
-                          color: Theme.of(context).colorScheme.background),
+                          color: Color.fromARGB(209, 255, 255, 255)),
                     ),
                     const SizedBox(
                       width: 5,
@@ -161,7 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           fontSize: 13,
-                          color: Theme.of(context).colorScheme.background),
+                          color: Color.fromARGB(209, 255, 255, 255)),
                     )
                   ],
                 )

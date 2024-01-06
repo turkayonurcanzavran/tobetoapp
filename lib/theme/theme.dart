@@ -4,28 +4,26 @@ ThemeData lightMode = ThemeData(
   brightness: Brightness.light,
   useMaterial3: true,
   colorScheme: const ColorScheme.light(
-      background: Color.fromARGB(255, 255, 255, 255),
+      background: Color.fromARGB(255, 241, 234, 248),
       primary: Color(0xFF9C34FC),
       secondary: Color(0xFFCC6CF4),
-      onPrimary: Color.fromARGB(255, 160, 160, 160)),
+      onPrimary: Color.fromARGB(255, 248, 248, 248),
+      onSecondary: Color(0xFF00D29B)),
   textTheme: const TextTheme(
     displaySmall: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 20,
       fontWeight: FontWeight.normal,
-      color: Colors.black,
     ),
     displayMedium: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 27,
       fontWeight: FontWeight.w500,
-      color: Colors.black,
     ),
     displayLarge: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: Colors.black,
     ),
   ),
 );
@@ -34,28 +32,26 @@ ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   useMaterial3: true,
   colorScheme: const ColorScheme.dark(
-      background: Color.fromARGB(255, 235, 215, 253),
-      primary: Color.fromARGB(255, 56, 19, 91),
+      background: Color.fromARGB(255, 204, 152, 255),
+      primary: Color.fromARGB(255, 74, 0, 144),
       secondary: Color.fromARGB(255, 107, 1, 152),
-      onPrimary: Color.fromARGB(255, 103, 100, 100)),
+      onPrimary: Color.fromARGB(255, 248, 248, 248),
+      onSecondary: Color(0xFF00D29B)),
   textTheme: const TextTheme(
     displaySmall: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 20,
       fontWeight: FontWeight.normal,
-      color: Colors.white,
     ),
     displayMedium: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 27,
       fontWeight: FontWeight.w500,
-      color: Colors.white,
     ),
     displayLarge: TextStyle(
       fontFamily: 'Tinos',
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
     ),
   ),
 );

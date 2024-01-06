@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/homescreen/text_styles.dart';
+
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
-import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({Key? key}) : super(key: key);
@@ -15,35 +14,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.only(
-            left: 10,
-            top: 10,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Image.asset(
-                "assets/image/tobeto-white-logo.png",
-                width: 200,
-                height: 200,
-              ),
-            ],
-          ),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        centerTitle: true,
+        title: Text('Takvim'),
       ),
-      endDrawer: const CompDrawer(),
-      floatingActionButton: buildSpeedDial(context),
+      drawer: CompDrawer(),
       body: Container(
-        child: Text(
-          "takvim",
-          style: TextStyle(color: Colors.black),
-        ),
-        // Sayfanın içeriğini buraya ekleyebilirsin
-      ),
+          // Sayfanın içeriğini buraya ekleyebilirsin
+          ),
     );
   }
 }

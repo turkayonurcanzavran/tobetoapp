@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:tobeto_app/homescreen/box_decorations.dart';
 import 'package:tobeto_app/homescreen/text_styles.dart';
-
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
-
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int? selectedIndex;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +49,25 @@ class _HomeScreenState extends State<HomeScreen> {
             textsSyle3: "Eslem Özlük",
             textsSyle4:
                 "Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!",
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          BoxDecorations(
+            width: 500,
+            height: 700,
+            image1: "assets/image/pattern.png",
+            image2: "assets/image/kodlama.png",
+            textList: [
+              "Başvurularım",
+              "Eğitimlerim",
+              "Duyuru ve Haberlerim",
+              "Anketlerim"
+            ],
+            selectedIndex: selectedIndex,
+            onItemTap: (index) {
+              setState(() {
+                selectedIndex = selectedIndex == index ? null : index;
+              });
+            },
           ),
         ],
       ),
