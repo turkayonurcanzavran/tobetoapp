@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:tobeto_app/homescreen/text_styles.dart';
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
-
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 
 class TobetoScreen extends StatefulWidget {

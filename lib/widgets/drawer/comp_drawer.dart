@@ -9,14 +9,35 @@ import 'package:tobeto_app/screens/tobeto_screen.dart';
 class CompDrawer extends StatelessWidget {
   const CompDrawer({Key? key}) : super(key: key);
 
+  PageRouteBuilder _createRoute(Widget page) {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => page,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(1.0, 0.0);
+        const end = Offset.zero;
+        const curve = Curves.easeInOut;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        var offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(
+          position: offsetAnimation,
+          child: child,
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.background,
       child: ListView(
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 130, top: 10, left: 10),
+          FractionalTranslation(
+            translation: Offset(-0.2, 0.9),
             child: Image.asset("assets/image/tobeto-logo.png", scale: 2),
           ),
           Column(
@@ -28,8 +49,6 @@ class CompDrawer extends StatelessWidget {
                   icon: Icon(Icons.close),
                   onPressed: () {
                     Navigator.pop(context);
-
-                    //basınca drawer ı kapat
                   },
                 ),
               ),
@@ -44,12 +63,12 @@ class CompDrawer extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            const HomeScreen())); // HomeScreen ekranı import edildi
+                    Navigator.of(context)
+                        .push(_createRoute(const HomeScreen()));
                   },
                 ),
               ),
+              // Diğer sayfalar için aynı yapıyı tekrarlayın
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: ListTile(
@@ -58,8 +77,8 @@ class CompDrawer extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const ReviewsScreen())); //
+                    Navigator.of(context)
+                        .push(_createRoute(const ReviewsScreen()));
                   },
                 ),
               ),
@@ -71,8 +90,8 @@ class CompDrawer extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const ProfileScreen())); //
+                    Navigator.of(context)
+                        .push(_createRoute(const ProfileScreen()));
                   },
                 ),
               ),
@@ -84,8 +103,8 @@ class CompDrawer extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const CatalogScreen())); //
+                    Navigator.of(context)
+                        .push(_createRoute(const CatalogScreen()));
                   },
                 ),
               ),
@@ -97,9 +116,8 @@ class CompDrawer extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            const CalendarScreen())); // HomeScreen ekranı import edildi
+                    Navigator.of(context)
+                        .push(_createRoute(const CalendarScreen()));
                   },
                 ),
               ),
@@ -108,16 +126,16 @@ class CompDrawer extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: ListTile(
-                      title: Text(
+                      contentPadding: EdgeInsets.only(left: 16, right: 211),
+                      leading: Text(
                         'Tobeto',
                         style: Theme.of(context).textTheme.displaySmall,
                       ),
-                      leading:
-                          const Icon(Icons.home_outlined, color: Colors.grey),
+                      title: const Icon(Icons.home_outlined,
+                          color: Color.fromARGB(255, 6, 240, 213)),
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) =>
-                                const TobetoScreen())); // tobeto ekranı import edilecek
+                        Navigator.of(context)
+                            .push(_createRoute(const TobetoScreen()));
                       },
                     ),
                   ),
@@ -130,7 +148,7 @@ class CompDrawer extends StatelessWidget {
                   title: Text('© 2022 Tobeto', style: TextStyle()),
                 ),
               ),
-            ], // ListView çocuklarını kapat
+            ],
           ),
         ],
       ),

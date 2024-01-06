@@ -2,6 +2,7 @@ import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
+import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 
 class ReviewsScreen extends StatefulWidget {
   const ReviewsScreen({Key? key}) : super(key: key);

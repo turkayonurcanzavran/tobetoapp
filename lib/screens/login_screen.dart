@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Mytextfield(
                   controller: usernameController,
                   hintText: "Kullanıcı Adı",
-                  obscureText: true,
+                  obscureText: false,
                 ),
                 SizedBox(
                     height: MediaQuery.of(context).size.height *
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Mytextfield(
                   controller: passwordController,
                   hintText: "Parola",
-                  obscureText: false,
+                  obscureText: true,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 //Text widget'ını yazdıktan sonra kutunun soluna hizalamak istedim, ama 'align' özelliğini kullanamadım. Çünkü çalışmanın başından beri 'center' kullanıyorum. Bu yüzden, 'Text' widget'ını yatayda 'Row' ile sardım ve 'mainAxisAlignment' özelliğini 'end' olarak ayarlayarak 'Card' ile mesafe oluşturmak için 'padding' kullandım
