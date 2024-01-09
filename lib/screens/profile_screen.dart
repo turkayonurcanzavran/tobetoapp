@@ -42,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Text("profilim"),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
-       bottomNavigationBar: BottomNavBarWidget(),
+      bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }

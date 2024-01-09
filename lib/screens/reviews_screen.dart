@@ -43,7 +43,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
         child: Text("değerlendirmeler"),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
-       bottomNavigationBar: BottomNavBarWidget(),
+      bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }
