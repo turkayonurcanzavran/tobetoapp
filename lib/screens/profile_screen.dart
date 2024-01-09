@@ -2,6 +2,7 @@ import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:tobeto_app/main.dart';
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
+import 'package:tobeto_app/widgets/bottom_nav_bar.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -41,6 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Text("profilim"),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
+       bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }

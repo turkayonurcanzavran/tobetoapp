@@ -29,7 +29,8 @@ class Mytextfield extends StatelessWidget {
             borderRadius: BorderRadius.all(
                 Radius.circular(10)), //kutuya ovallik eklemek için
           ),
-          fillColor: Theme.of(context).colorScheme.onPrimary, //kutunun iç rengi
+          fillColor:
+              Theme.of(context).colorScheme.background, //kutunun iç rengi
           filled: true,
           hintText: hintText, //2
           hintStyle: Theme.of(context)

@@ -102,7 +102,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Expanded(
                         child: Divider(
                           thickness: 1,
-                          color: Color.fromARGB(209, 255, 255, 255),
                         ),
                       ),
                       Padding(
