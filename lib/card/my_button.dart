@@ -16,16 +16,13 @@ class MyButton extends StatelessWidget {
         padding: EdgeInsets.all(15),
         margin: EdgeInsets.symmetric(horizontal: 31),
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.onPrimary,
+            color: Color.fromARGB(255, 187, 7, 190),
             borderRadius: BorderRadius.circular(10)),
         child: Center(
-          child: Text(
-            "Giriş Yap",
-            style: Theme.of(context)
-                .textTheme
-                .displayMedium
-                ?.copyWith(color: Colors.white),
-          ),
+          child: Text("Giriş Yap",
+              style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  backgroundColor: Color.fromARGB(255, 187, 7, 190))),
         ),
       ),
     );

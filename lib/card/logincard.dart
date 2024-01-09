@@ -36,8 +36,8 @@ class Logincard extends StatelessWidget {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                        Colors.white.withOpacity(0.15),
-                        Colors.white.withOpacity(0.05)
+                        const Color.fromARGB(255, 48, 23, 23).withOpacity(0.15),
+                        const Color.fromARGB(255, 167, 87, 87).withOpacity(0.05)
                       ])),
             ),
             Center(

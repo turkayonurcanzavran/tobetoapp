@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
+import 'package:tobeto_app/widgets/bottom_nav_bar.dart';
 
 class ReviewsScreen extends StatefulWidget {
   const ReviewsScreen({Key? key}) : super(key: key);
@@ -42,6 +43,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
         child: Text("değerlendirmeler"),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
+       bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }
