@@ -5,7 +5,7 @@ ThemeData lightMode = ThemeData(
   useMaterial3: true,
   colorScheme: const ColorScheme.light(
       background: Color.fromARGB(255, 241, 234, 248),
-      primary: Color(0xFF9C34FC),
+      primary: Color.fromRGBO(156, 52, 252, 1),
       secondary: Color(0xFFCC6CF4),
       onPrimary: Color.fromARGB(255, 248, 248, 248),
       onSecondary: Color(0xFF00D29B)),

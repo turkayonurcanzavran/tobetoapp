@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/main.dart';
 
 class GradientCard extends StatelessWidget {
   const GradientCard(
