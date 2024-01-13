@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/homescreen/box_decorations.dart';
-import 'package:tobeto_app/homescreen/text_styles.dart';
+
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
 import 'package:tobeto_app/card/gradient_card.dart';
@@ -44,119 +43,13 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: buildSpeedDial(context),
       body: ListView(
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-          const TextStyles(
-            textSyle1: "TOBETO",
-            textStyle2: "'ya hoş geldin",
-            textsSyle3: "Eslem Özlük",
-            textsSyle4:
-                "Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!",
-          ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
           Container(
+            alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               color: Theme.of(context).scaffoldBackgroundColor,
             ),
-            child: Column(
-              children: [
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50),
-                  child: Text(
-                    "Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini al.",
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium!
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    text: "Aradığın ",
-                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).textTheme.bodyLarge?.color ??
-                              Theme.of(context).colorScheme.background,
-                        ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: '"',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.secondary),
-                      ),
-                      TextSpan(
-                        text: "İş",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge
-                                      ?.color ??
-                                  Theme.of(context).colorScheme.background,
-                            ),
-                      ),
-                      TextSpan(
-                        text: '"',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.secondary),
-                      ),
-                      TextSpan(
-                        text: " Burada! ",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge
-                                      ?.color ??
-                                  Theme.of(context).colorScheme.background,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-              ],
-            ),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-          BoxDecorations(
-            width: 500,
-            height: 700,
-            image1: "assets/image/pattern.png",
-            image2: "assets/image/kodlama.png",
-            textList: const [
-              "Başvurularım",
-              "Eğitimlerim",
-              "Duyuru ve Haberlerim",
-              "Anketlerim"
-            ],
-            selectedIndex: selectedIndex,
-            onItemTap: (index) {
-              setState(() {
-                selectedIndex = selectedIndex == index ? null : index;
-              });
-            },
-          ),
+
           //""""""""""""""""""""""""""""""""
 
           SizedBox(height: 20),

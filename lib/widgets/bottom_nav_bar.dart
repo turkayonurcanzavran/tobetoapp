@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/screens/calendar_screen.dart';
-import 'package:tobeto_app/screens/catalog_screen.dart';
-import 'package:tobeto_app/screens/home_screen.dart';
-import 'package:tobeto_app/screens/profile_screen.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
   @override

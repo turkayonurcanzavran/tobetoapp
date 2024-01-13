@@ -83,8 +83,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             .textTheme
                             .displaySmall
                             ?.copyWith(
-                                color: Color.fromARGB(209, 255, 255, 255),
-                                fontSize: 15),
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontSize: 16),
                       ),
                     ],
                   ),
@@ -112,14 +112,15 @@ class _LoginScreenState extends State<LoginScreen> {
                               .textTheme
                               .displaySmall
                               ?.copyWith(
-                                  color: Color.fromARGB(209, 255, 255, 255),
-                                  fontSize: 16),
+                                  color:
+                                      const Color.fromARGB(255, 255, 255, 255),
+                                  fontSize: 20),
                         ),
                       ),
                       const Expanded(
                         child: Divider(
                           thickness: 1,
-                          color: Color.fromARGB(209, 255, 255, 255),
+                          color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
                     ],
@@ -150,19 +151,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "üye Değilsen,",
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: 13,
+                          fontSize: 17,
                           fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(209, 255, 255, 255)),
-                    ),
-                    const SizedBox(
-                      width: 5,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
                     ),
                     Text(
-                      "Şimdi Kayıt Ol ",
+                      " Şimdi Kayıt Ol ",
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: Color.fromARGB(209, 255, 255, 255)),
+                          fontSize: 17,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
                     )
                   ],
                 )
