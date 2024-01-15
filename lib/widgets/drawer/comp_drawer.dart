@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tobeto_app/screens/calendar_screen.dart';
 import 'package:tobeto_app/screens/catalog_screen.dart';
 import 'package:tobeto_app/screens/home_screen.dart';
-import 'package:tobeto_app/screens/login_screen.dart';
+import 'package:tobeto_app/screens/login_screen/login_screen.dart';
 import 'package:tobeto_app/screens/profile_screen.dart';
 import 'package:tobeto_app/screens/reviews_screen.dart';
 import 'package:tobeto_app/screens/tobeto_screen.dart';

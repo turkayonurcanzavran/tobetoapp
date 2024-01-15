@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/screens/login_screen.dart';
+import 'package:tobeto_app/screens/login_screen/login_screen.dart';
 
 class InfoScreen extends StatefulWidget {
   const InfoScreen({Key? key}) : super(key: key);
@@ -50,8 +50,8 @@ class _InfoScreenState extends State<InfoScreen> {
             // Eğer şu anki sayfa 3. sayfa ise
 
             Positioned(
-              bottom: 300,
-              left: 130,
+              bottom: MediaQuery.of(context).size.height / 6.5,
+              left: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                 onPressed: () {
                   // Butona tıklandığında yapılacak işlemler

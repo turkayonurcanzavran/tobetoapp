@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/card/logincard.dart';
-import 'package:tobeto_app/card/my_button.dart';
-import 'package:tobeto_app/card/mytextfield.dart';
-import 'package:tobeto_app/card/square_tile.dart';
+import 'package:tobeto_app/screens/login_screen/logincard.dart';
+import 'package:tobeto_app/screens/login_screen/my_button.dart';
+import 'package:tobeto_app/screens/login_screen/mytextfield.dart';
+import 'package:tobeto_app/screens/login_screen/square_tile.dart';
 import 'package:tobeto_app/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {

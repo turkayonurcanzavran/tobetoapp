@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class Logincard extends StatelessWidget {
-  const Logincard(
-      {Key? key,
-      required this.theHeight,
-      required this.theChild,
-      required this.theWidth})
-      : super(key: key);
-  final theChild;
+  const Logincard({
+    Key? key,
+    required this.theHeight,
+    required this.theChild,
+    required this.theWidth,
+  }) : super(key: key);
+
+  final Widget theChild; // Widget tipi belirtildi
   final double theWidth;
   final double theHeight;
 
@@ -31,8 +32,8 @@ class Logincard extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadiusDirectional.circular(30),
                   border: Border.all(
-                      color:
-                          Color.fromARGB(255, 255, 255, 255).withOpacity(0.13)),
+                      color: const Color.fromARGB(255, 255, 255, 255)
+                          .withOpacity(0.13)),
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -40,14 +41,12 @@ class Logincard extends StatelessWidget {
                         const Color.fromARGB(255, 255, 255, 255)
                             .withOpacity(0.15),
                         const Color.fromARGB(255, 255, 255, 255)
-                            .withOpacity(0.05)
+                            .withOpacity(0.05),
                       ])),
             ),
             Center(
               child: theChild,
             ),
-
-            //child-top layer
           ],
         ),
       ),
