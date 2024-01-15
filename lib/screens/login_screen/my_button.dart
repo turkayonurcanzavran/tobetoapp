@@ -13,16 +13,16 @@ class MyButton extends StatelessWidget {
       onTap:
           onTap, // login sayfasında mybutton(ontap (){}) değrine bu sayfanın gideceği yeri belirleyeceğim.
       child: Container(
-        padding: EdgeInsets.all(15),
-        margin: EdgeInsets.symmetric(horizontal: 31),
+        padding: const EdgeInsets.all(15),
+        margin: const EdgeInsets.symmetric(horizontal: 31),
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 187, 7, 190),
+            color: Theme.of(context).colorScheme.onSecondary,
             borderRadius: BorderRadius.circular(10)),
         child: Center(
           child: Text("Giriş Yap",
               style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  backgroundColor: Color.fromARGB(255, 187, 7, 190))),
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                  )),
         ),
       ),
     );

@@ -80,6 +80,10 @@ flutter:
     - "assets/image/kullanıcı.png"
     - assets/image/converted.png
     - assets/image/tobeto-logo_beyaz_2.png
+    - assets/image/tobeto_1.png
+    - assets/image/tobeto_2.png
+    - assets/image/tobeto_3.png
+    - assets/image/banner_1.png
     
 
  
