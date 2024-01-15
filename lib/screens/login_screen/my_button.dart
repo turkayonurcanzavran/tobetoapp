@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.symmetric(horizontal: 31),
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.onSecondary,
             borderRadius: BorderRadius.circular(10)),
         child: Center(
           child: Text("Giriş Yap",

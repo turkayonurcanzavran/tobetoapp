@@ -6,13 +6,15 @@ class GradientCard extends StatelessWidget {
       required this.colorcard1,
       required this.colorcard2,
       required this.colorcard3,
-      required this.baslik})
+      required this.baslik,
+      required this.onPressed})
       : super(key: key);
   final Color colorcard1;
   final Color colorcard2;
   final Color colorcard3;
 
   final String baslik;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class GradientCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.9,
       height: MediaQuery.of(context).size.height * 0.22,
       decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
           topRight: Radius.circular(50),
           bottomLeft: Radius.circular(50),
           bottomRight: Radius.circular(50),
@@ -43,16 +45,16 @@ class GradientCard extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {},
+              child: Text("Başla",
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.background,
+                      fontWeight: FontWeight.bold)),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   minimumSize: Size(
                     MediaQuery.of(context).size.width * 0.8,
                     MediaQuery.of(context).size.height * 0.04,
-                  )),
-              child: Text("Başla",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: Theme.of(context).colorScheme.background,
-                      fontWeight: FontWeight.bold))),
+                  ))),
         ],
       ),
     );
