@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tobeto_app/screens/build_screen/Custom_SearchBar.dart';
+import 'package:tobeto_app/screens/home_screen/Custom_SearchBar.dart';
 
-import 'package:tobeto_app/screens/build_screen/build_banner.dart';
-import 'package:tobeto_app/screens/build_screen/footer.dart';
-import 'package:tobeto_app/screens/build_screen/gradient_card/gradient_card_list.dart';
-import 'package:tobeto_app/screens/build_screen/welcome_text.dart';
+import 'package:tobeto_app/screens/home_screen/build_banner.dart';
+import 'package:tobeto_app/screens/home_screen/button/button_widget.dart';
+import 'package:tobeto_app/screens/home_screen/example.dart';
+import 'package:tobeto_app/screens/home_screen/footer.dart';
+import 'package:tobeto_app/screens/home_screen/gradient_card/gradient_card_list.dart';
+import 'package:tobeto_app/screens/home_screen/welcome_text.dart';
 
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
@@ -20,6 +22,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int? selectedIndex;
+  bool showInfoContainer = false;
+  bool showshowInfoContainerTwo = false;
+  bool showshowInfoContainerThree = false;
+  bool showshowInfoContainerFour = false;
+  @override
+  void initState() {
+    super.initState();
+    showInfoContainer = true;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +58,14 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavBarWidget(),
       body: ListView(
         children: [
-          WelcomeText(),
-          CustomSearchBar(),
-          BuildBanner(),
-          GradientCardList(),
-          Footer(),
+          WelcomeText(), //1
+          CustomSearchBar(), //2
+
+          BuildBanner(), //3
+          ButtonWidget(), //4
+          Example(),
+          GradientCardList(), //5
+          Footer(), //5
         ],
       ),
     );

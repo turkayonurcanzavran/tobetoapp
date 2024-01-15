@@ -23,9 +23,9 @@ class GradientCard extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.22,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          topRight: Radius.circular(50),
-          bottomLeft: Radius.circular(50),
-          bottomRight: Radius.circular(50),
+          topRight: Radius.circular(30),
+          bottomLeft: Radius.circular(30),
+          bottomRight: Radius.circular(30),
         ),
         gradient: LinearGradient(
           colors: [colorcard1, colorcard2, colorcard3],
@@ -52,7 +52,7 @@ class GradientCard extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   minimumSize: Size(
-                    MediaQuery.of(context).size.width * 0.8,
+                    MediaQuery.of(context).size.width * 0.6,
                     MediaQuery.of(context).size.height * 0.04,
                   ))),
         ],
