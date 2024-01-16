@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:tobeto_app/widgets/drawer/comp_drawer.dart';
 
 import 'package:tobeto_app/widgets/speed_dial/SpeedDialWidget.dart';
-import 'package:tobeto_app/widgets/bottom_nav_bar.dart';
 
 class TobetoScreen extends StatefulWidget {
   const TobetoScreen({Key? key}) : super(key: key);
@@ -43,7 +42,6 @@ class _TobetoScreenState extends State<TobetoScreen> {
         child: Text("tobeto screen"),
         // Sayfanın içeriğini buraya ekleyebilirsin
       ),
-      bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }
