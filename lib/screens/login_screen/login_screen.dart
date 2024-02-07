@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto_app/screens/login_screen/password/create_Account.dart';
+import 'package:tobeto_app/screens/login_screen/password/forgot_password.dart';
 import 'package:tobeto_app/screens/login_screen/logincard.dart';
 import 'package:tobeto_app/screens/login_screen/my_button.dart';
 import 'package:tobeto_app/screens/login_screen/mytextfield.dart';
@@ -77,14 +79,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        "Şifremi Unuttum",
-                        style: Theme.of(context)
-                            .textTheme
-                            .displaySmall
-                            ?.copyWith(
-                                color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 16),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => ForgotPassword()));
+                        },
+                        child: Text(
+                          "Şifremi Unuttum",
+                          style: Theme.of(context)
+                              .textTheme
+                              .displaySmall
+                              ?.copyWith(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontSize: 16),
+                        ),
                       ),
                     ],
                   ),
@@ -106,15 +114,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          "Hesap Oluştur",
-                          style: Theme.of(context)
-                              .textTheme
-                              .displaySmall
-                              ?.copyWith(
-                                  color:
-                                      const Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => CreateAccount()));
+                          },
+                          child: Text(
+                            "Hesap Oluştur",
+                            style: Theme.of(context)
+                                .textTheme
+                                .displaySmall
+                                ?.copyWith(
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
+                                    fontSize: 20),
+                          ),
                         ),
                       ),
                       const Expanded(
