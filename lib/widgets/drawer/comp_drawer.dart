@@ -7,17 +7,21 @@ import 'package:tobeto_app/screens/reviews_screen.dart';
 import 'package:tobeto_app/screens/tobeto_screen.dart';
 import 'package:tobeto_app/widgets/drawer/my_header_driver.dart';
 
-class CompDrawer extends StatelessWidget {
+class CompDrawer extends StatefulWidget {
   const CompDrawer({Key? key}) : super(key: key);
+  @override
+  _CompDrawerState createState() => _CompDrawerState();
+}
 
+class _CompDrawerState extends State<CompDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           children: [
-            MyHeaderDriver(),
+            const MyHeaderDriver(),
             const SizedBox(height: 40),
             Image.asset(
               "assets/image/tobeto-logo.png",
@@ -35,10 +39,10 @@ class CompDrawer extends StatelessWidget {
                 leading: const Icon(Icons.home, color: Colors.grey),
                 title: Text(
                   "Anasayfa",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(fontSize: 18, fontWeight: FontWeight.w500),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
                 ),
               ),
             ),
