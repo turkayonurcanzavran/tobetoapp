@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tobeto_app/screens/agenda_screen/ajanda_sayfasi.dart';
 import 'package:tobeto_app/screens/calendar_screen.dart';
 import 'package:tobeto_app/screens/catalog_screen.dart';
 import 'package:tobeto_app/screens/home_screen.dart';
@@ -114,24 +115,6 @@ class _CompDrawerState extends State<CompDrawer> {
                 leading: const Icon(Icons.star, color: Colors.grey),
                 title: Text(
                   "Değerlendirmeler",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(fontSize: 18, fontWeight: FontWeight.w500),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: ListTile(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => TobetoScreen(),
-                  ));
-                },
-                leading: const Icon(Icons.home, color: Colors.amber),
-                title: Text(
-                  "Tobeto",
                   style: Theme.of(context)
                       .textTheme
                       .bodyLarge

@@ -31,6 +31,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_speed_dial: ^4.0.2
+  table_calendar: ^3.0.2
+ 
+
+  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -86,6 +90,16 @@ flutter:
     - assets/image/tobeto_2.png
     - assets/image/tobeto_3.png
     - assets/image/banner_1.png
-    
+    - assets/image/profile_picture.jpg
+    - assets/image/diatonik.png
+    - assets/image/1.jpg
+    - assets/image/2.jpg
+    - assets/image/3.jpg
+    - assets/image/4.jpg
+    - assets/image/5.jpg
+    - assets/image/activity.png
+    - assets/image/backround.jpg
+    - assets/videos/
+    - assets/video_thumbnail.jpg
 
  
